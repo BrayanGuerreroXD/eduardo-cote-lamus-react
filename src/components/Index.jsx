@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NumericKeyboard from "./NumericKeyboard";
 import Header from "./Header";
 import "../styles/numericKeyboard.css";
+import "../styles/footer.css";
 
 function Index() {
   const [value, setValue] = useState("");
@@ -22,24 +23,32 @@ function Index() {
     <div className="container">
       <Header />
 
-    <h1>Bienvendio/a, ingresa tu código:</h1>
+      <h1 className="h1">Bienvendio/a, ingresa tu código:</h1>
 
       <div className="row">
-        <input
-          className="input"
-          type="text"
-          value={value}
-          onChange={handleInputChange}
-        />
-        <button className="btn btn-danger" onClick={handleClearClick}>
-          Borrar
-        </button>
+        <div className="col">
+          <input
+            className="form-control"
+            type="text"
+            value={value}
+            onChange={handleInputChange}
+          />
+        </div>
       </div>
       <NumericKeyboard
         value={value}
         setValue={setValue}
         onEnterClick={handleEnterClick}
+        onClearClick={handleClearClick}
       />
+
+      <footer>
+        <div id="signature">
+          <p className="h5">
+            <em>designed by FABLAB UFPS</em>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -1,16 +1,16 @@
 .container {
-    margin-top: 50px;
-    text-align: center;
-  }
+  margin-top: 50px;
+  text-align: center;
+}
 
-  .input {
-    margin-left: 10px;
-    width: 300px;
-    height: 80px;
-  }
-  
+.form-control {
+  width: 14vh;
+  height: 7vh;
+}
+
 .btn {
-    width: 140px;
-    height: 80px;
-    margin: 10px;
-  }
+  width: 14vh;
+  height: 7vh;
+  margin: 10px;
+  font-size: 5em;
+}
