@@ -1,0 +1,12 @@
+.header {
+    height: 20%;
+    background-image: url(../assets/eduardo-cote-lamus.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hide-text {
+    display: none;
+  }
