@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NumericKeyboard from "./NumericKeyboard";
 import Header from "./Header";
+import Modal from "./Modal";
+import Overlay from "./Overlay";
 
 import userExists from "../api/registerUser";
 
@@ -59,6 +61,9 @@ function Index() {
         onEnterClick={handleEnterClick}
         onClearClick={handleClearClick}
       />
+
+      <Overlay isVisible={showModal} />
+      <Modal showModal={showModal}/>
 
       <footer>
         <div id="signature">
