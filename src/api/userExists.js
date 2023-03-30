@@ -2,6 +2,8 @@ import registerUSer from "./registerUser";
 
 const userExists = async (code) => {
   let userExists = false;
+  let user_name = "";
+  let user_lastname = "";
 
   // Check if user exists
   try {
@@ -17,14 +19,16 @@ const userExists = async (code) => {
 
     if (data.id) {
       console.log(data)
-      registerUSer(data.id);
+      // registerUSer(data.id);
       userExists = true;
+      user_name = data.name;
+      user_lastname = data.lastname;
     }
   } catch (error) {
     console.log(error);
   }
 
-  return userExists;
+  return {userExists, user_name, user_lastname};
 };
 
 export default userExists;

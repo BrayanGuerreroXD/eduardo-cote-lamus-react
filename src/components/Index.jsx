@@ -24,10 +24,10 @@ function Index() {
 
   const handleEnterClick = async () => {
     try {
-      const userExistsResult = await userExists(value);
+      const {userExists, user_name, user_lastname} = await userExists(value);
 
-      if (userExistsResult) {
-        console.log("The user exists");
+      if (userExists) {
+        console.log(`The user ${user_name} ${user_lastname} exists`);
         setValue("");
         setVerified(true);
         setShowModal(true);
@@ -52,16 +52,8 @@ function Index() {
             type="text"
             value={value}
             onChange={handleInputChange}
+            style={{ fontSize: "3vh" }}
           />
-
-          {/* <select
-            className="form-select form-select-lg mb-3"
-            aria-label=".form-select-lg example"
-          >
-            <option selected>Entrada</option>
-            <option value="1">Entrada</option>
-            <option value="2">Salida</option>
-          </select> */}
 
         </div>
       </div>
@@ -73,7 +65,7 @@ function Index() {
       />
 
       <Overlay isVisible={showModal} />
-      <Modal showModal={showModal} />
+      <Modal showModal={showModal} setShowModal={setShowModal} />
 
       <footer>
         <div id="signature">

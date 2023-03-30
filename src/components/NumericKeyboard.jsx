@@ -22,6 +22,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="1"
+            style={{ fontSize: "3vh" }}
           >
             1
           </button>
@@ -30,6 +31,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="2"
+            style={{ fontSize: "3vh" }}
           >
             2
           </button>
@@ -38,6 +40,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="3"
+            style={{ fontSize: "3vh" }}
           >
             3
           </button>
@@ -50,6 +53,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="4"
+            style={{ fontSize: "3vh" }}
           >
             4
           </button>
@@ -58,6 +62,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="5"
+            style={{ fontSize: "3vh" }}
           >
             5
           </button>
@@ -66,6 +71,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="6"
+            style={{ fontSize: "3vh" }}
           >
             6
           </button>
@@ -78,6 +84,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="7"
+            style={{ fontSize: "3vh" }}
           >
             7
           </button>
@@ -86,6 +93,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="8"
+            style={{ fontSize: "3vh" }}
           >
             8
           </button>
@@ -94,6 +102,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="9"
+            style={{ fontSize: "3vh" }}
           >
             9
           </button>
@@ -105,6 +114,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             type="button"
             className="btn btn-danger"
             onClick={handleButtonClick}
+            style={{ fontSize: "3vh" }}
           >
             Borrar
           </button>
@@ -113,6 +123,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             className="btn btn-light"
             onClick={handleButtonClick}
             value="0"
+            style={{ fontSize: "3vh" }}
           >
             0
           </button>
@@ -120,6 +131,7 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
             type="button"
             className="btn btn-danger"
             onClick={handleButtonClick}
+            style={{ fontSize: "3vh" }}
           >
             Ingresar
           </button>

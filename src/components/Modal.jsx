@@ -1,6 +1,10 @@
 import React from "react";
 
-function Modal({ showModal }) {
+function Modal({ showModal, setShowModal }) {
+  const handleClose = () => {
+    setShowModal(false);
+  };
+
   return (
     <div
       className={`modal fade ${showModal ? "show" : ""}`}
@@ -19,18 +23,18 @@ function Modal({ showModal }) {
     >
       <div className="modal-dialog">
         <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">
-              Modal title
-            </h5>
+          <div className="modal-body">
+            hahaha
             <button
               type="button"
-              className="btn-close"
+              className="btn btn-danger"
               data-bs-dismiss="modal"
               aria-label="Close"
-            ></button>
+              onClick={handleClose}
+            >
+              Close
+            </button>
           </div>
-          <div className="modal-body">...</div>
         </div>
       </div>
     </div>
