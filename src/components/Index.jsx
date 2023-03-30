@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import NumericKeyboard from "./NumericKeyboard";
 import Header from "./Header";
+
+import userExists from "../api/registerUser";
+
 import "../styles/numericKeyboard.css";
 import "../styles/footer.css";
 
 function Index() {
   const [value, setValue] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [verified, setVerified] = useState(false);
 
   const handleInputChange = (event) => {
     setValue(event.target.value);
@@ -16,7 +21,14 @@ function Index() {
   };
 
   const handleEnterClick = () => {
-    console.log(`Valor ingresado: ${value}`);
+    // console.log(`Valor ingresado: ${value}`);
+    if(userExists(value)){
+      console.log('The user exists');
+      setVerified(true);
+      setShowModal(true);
+    }else {
+      console.log('The user does not exist');
+    }
   };
 
   return (
