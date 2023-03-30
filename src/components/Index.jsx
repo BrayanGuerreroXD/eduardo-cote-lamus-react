@@ -20,16 +20,22 @@ function Index() {
     setValue(value.slice(0, -1));
   };
 
-  const handleEnterClick = () => {
-    // console.log(`Valor ingresado: ${value}`);
-    if(userExists(value)){
-      console.log('The user exists');
-      setVerified(true);
-      setShowModal(true);
-    }else {
-      console.log('The user does not exist');
+  const handleEnterClick = async () => {
+    try {
+      const userExistsResult = await userExists(value);
+      
+      if (userExistsResult) {
+        console.log('The user exists');
+        setValue('');
+        setVerified(true);
+        setShowModal(true);
+      } else {
+        console.log('The user does not exist');
+      }
+    } catch (error) {
+      console.log(`Error checking user existence: ${error.message}`);
     }
-  };
+  };  
 
   return (
     <div className="container">
