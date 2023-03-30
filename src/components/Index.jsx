@@ -4,7 +4,7 @@ import Header from "./Header";
 import Modal from "./Modal";
 import Overlay from "./Overlay";
 
-import userExists from "../api/registerUser";
+import userExists from "../api/userExists.js";
 
 import "../styles/numericKeyboard.css";
 import "../styles/footer.css";
@@ -25,25 +25,25 @@ function Index() {
   const handleEnterClick = async () => {
     try {
       const userExistsResult = await userExists(value);
-      
+
       if (userExistsResult) {
-        console.log('The user exists');
-        setValue('');
+        console.log("The user exists");
+        setValue("");
         setVerified(true);
         setShowModal(true);
       } else {
-        console.log('The user does not exist');
+        console.log("The user does not exist");
       }
     } catch (error) {
       console.log(`Error checking user existence: ${error.message}`);
     }
-  };  
+  };
 
   return (
     <div className="container">
       <Header />
 
-      <h1 className="h1">Bienvendio/a, ingresa tu código:</h1>
+      <h1 className="h1">Bienvenido/a, ingresa tu código:</h1>
 
       <div className="row">
         <div className="col">
@@ -53,6 +53,16 @@ function Index() {
             value={value}
             onChange={handleInputChange}
           />
+
+          {/* <select
+            className="form-select form-select-lg mb-3"
+            aria-label=".form-select-lg example"
+          >
+            <option selected>Entrada</option>
+            <option value="1">Entrada</option>
+            <option value="2">Salida</option>
+          </select> */}
+
         </div>
       </div>
       <NumericKeyboard
@@ -63,7 +73,7 @@ function Index() {
       />
 
       <Overlay isVisible={showModal} />
-      <Modal showModal={showModal}/>
+      <Modal showModal={showModal} />
 
       <footer>
         <div id="signature">
