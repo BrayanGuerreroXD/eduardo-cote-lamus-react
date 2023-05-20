@@ -42,6 +42,9 @@ function Index() {
         setShowQR(true);
       }
 
+      // Clear input
+      setValue("");
+
       Swal.fire({
         icon: userExists ? "success" : "error",
         title: title,

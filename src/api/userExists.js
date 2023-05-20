@@ -1,5 +1,4 @@
 import registerUSer from "./registerUser";
-import registersByUSerID from "./registersByUserID";
 
 const userExists = async (code) => {
   let userExists = false;
