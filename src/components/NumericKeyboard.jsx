@@ -6,9 +6,9 @@ function NumericKeyboard({ value, setValue, onEnterClick, onClearClick }) {
     const buttonValue = event.target.textContent;
     if (buttonValue === "Ingresar") {
       onEnterClick();
-    } else if (buttonValue === "Borrar"){
+    } else if (buttonValue === "Borrar") {
       onClearClick();
-    }else {
+    } else {
       setValue(value + buttonValue);
     }
   };

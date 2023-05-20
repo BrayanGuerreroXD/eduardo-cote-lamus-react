@@ -1,4 +1,5 @@
 import registerUSer from "./registerUser";
+import registersByUSerID from "./registersByUserID";
 
 const userExists = async (code) => {
   let userExists = false;
@@ -8,7 +9,7 @@ const userExists = async (code) => {
   // Check if user exists
   try {
     const response = await fetch(
-      `https://ufps-library-register-production.up.railway.app/api/users/${code}`
+      `http://localhost:3000/api/users/${code}`
     );
 
     if (response.status === 404) {
@@ -18,8 +19,7 @@ const userExists = async (code) => {
     const data = await response.json();
 
     if (data.id) {
-      console.log(data)
-      // registerUSer(data.id);
+      await registerUSer(data.id);
       userExists = true;
       user_name = data.name;
       user_lastname = data.lastname;

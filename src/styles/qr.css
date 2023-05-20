@@ -1,0 +1,10 @@
+.QR {
+  background-image: url(../assets/qr_test.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
