@@ -18,7 +18,7 @@ const registerUSer = async (user_id) => {
     user_id: user_id,
   };
 
-  fetch("https://library-register-restapi-production.up.railway.app/api/registers", {
+  fetch(`${API}/api/registers`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

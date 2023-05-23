@@ -8,7 +8,7 @@ const userExists = async (code) => {
   // Check if user exists
   try {
     const response = await fetch(
-      `https://library-register-restapi-production.up.railway.app/api/users/${code}`
+      `${API}}/api/users/${code}`
     );
 
     if (response.status === 404) {
