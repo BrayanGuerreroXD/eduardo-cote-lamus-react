@@ -1,3 +1,9 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const API = process.env.API;
+
 const registerUSer = async (user_id) => {
   // Get date as string in ISO format (YYYYY-MM-DD)
   const currentDate = new Date();

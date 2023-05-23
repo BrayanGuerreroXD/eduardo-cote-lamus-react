@@ -1,4 +1,9 @@
 import registerUSer from "./registerUser";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const API = process.env.API;
 
 const userExists = async (code) => {
   let userExists = false;
