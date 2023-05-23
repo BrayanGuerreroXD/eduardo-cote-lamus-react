@@ -1,8 +1,4 @@
-import dotenv from "dotenv";
-
-dotenv.config();
-
-const API = process.env.API;
+import API from "./env.js";
 
 const registerUSer = async (user_id) => {
   // Get date as string in ISO format (YYYYY-MM-DD)
