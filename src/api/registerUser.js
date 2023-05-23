@@ -1,5 +1,3 @@
-import API from "./env.js";
-
 const registerUSer = async (user_id) => {
   // Get date as string in ISO format (YYYYY-MM-DD)
   const currentDate = new Date();
@@ -20,7 +18,7 @@ const registerUSer = async (user_id) => {
     user_id: user_id,
   };
 
-  fetch(`${API}/api/registers`, {
+  fetch(`https://library-register-restapi-production.up.railway.app/api/registers`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

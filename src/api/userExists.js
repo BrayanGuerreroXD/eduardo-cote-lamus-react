@@ -1,5 +1,4 @@
 import registerUSer from "./registerUser";
-import API from "./env.js";
 
 const userExists = async (code) => {
   let userExists = false;
@@ -9,7 +8,7 @@ const userExists = async (code) => {
   // Check if user exists
   try {
     const response = await fetch(
-      `${API}}/api/users/${code}`
+      `https://library-register-restapi-production.up.railway.app/api/users/${code}`
     );
 
     if (response.status === 404) {
